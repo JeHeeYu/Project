@@ -2,6 +2,11 @@
 
 This project is a program that can do simple serial communication.
 
+Operating System : Windows10
+Programming Language : C, C++
+User Interface Tool : Qt5
+Copiler : MSVC2017 64bit
+
 This Image is the Main User Interface of Program.
 
 ![Main UI](https://user-images.githubusercontent.com/87363461/143065923-a9e1ba50-4ec2-423b-9ffa-0e60aba7a7e1.JPG)
