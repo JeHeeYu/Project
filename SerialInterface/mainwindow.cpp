@@ -50,8 +50,6 @@ void MainWindow::on_sendButton_clicked()
 
 void MainWindow::on_connectButton_clicked()
 {
-    serialPort = new QSerialPort();
-    serialPort->setPortName("COM13");
     serialPort->setBaudRate(QSerialPort::Baud9600);
     serialPort->setBaudRate(QSerialPort::Baud9600);
     serialPort->setDataBits(QSerialPort::Data8);
