@@ -22,3 +22,11 @@ Development Tool : MPLAB X IDE
 #### Product detail of function  
 1. Internal arithmetic operation for detection
 2. Transfer the calculation result to the main board
+
+#### My Job
+1. Product maintenance
+2. Modification of source code (Change fuctions)
+3. Create product documentation
+
+#### Develop period
+6 months
