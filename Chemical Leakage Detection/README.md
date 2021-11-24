@@ -13,11 +13,11 @@ Development Tool : STM32CUBEIDE
 2. Detection accuracy can be set by operating the LCD
 
 #### Project Configuration (Sub Board)
-MCU : PIC16F18857
+MCU : PIC16F18857  
 Programming Lanuage : C  
 Using Skil : GPIO, I2C, UART, ADC, CDC, Timer etc..  
 Development OS : Windows  
-Development Tool : MPLAB X IDE
+Development Tool : MPLAB X IDE  
 
 #### Product detail of function  
 1. Internal arithmetic operation for detection
