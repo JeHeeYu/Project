@@ -1,0 +1,26 @@
+/*
+ * serialcomm.h
+ *
+ *  Created on: Apr 3, 2022
+ *      Author: sees1
+ */
+
+#ifndef INC_SERIALCOMM_H_
+#define INC_SERIALCOMM_H_
+
+#include "main.h"
+
+#define MAX_BUFFER_SIZE    255
+
+typedef struct{
+  uint8_t front;
+  uint8_t rear;
+  uint8_t buffer[MAX_BUFFER_SIZE];
+}Serial;
+
+void SerialInit(Serial* arg);
+void EnQueue(Serial*, uint8_t);
+uint8_t DeQueue(Serial*);
+uint8_t EmptyQueue(Serial*);
+
+#endif /* INC_SERIALCOMM_H_ */

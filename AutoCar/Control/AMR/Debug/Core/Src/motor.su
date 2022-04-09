@@ -1,0 +1,9 @@
+motor.c:33:6:MotorControl	16	static
+motor.c:53:6:Straight	8	static
+motor.c:63:6:Stop	8	static
+motor.c:73:6:UpperLeft	8	static
+motor.c:83:6:UpperRight	8	static
+motor.c:93:6:Right	4	static
+motor.c:98:6:Left	4	static
+motor.c:103:6:MotorOn	16	static
+motor.c:110:6:MotorOff	16	static

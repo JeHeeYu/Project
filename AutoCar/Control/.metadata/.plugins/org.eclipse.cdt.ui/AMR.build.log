@@ -1,0 +1,25 @@
+16:39:05 **** Incremental Build of configuration Debug for project AMR ****
+make -j12 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F401xE -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:127:3: warning: implicit declaration of function 'MotorControl'; did you mean 'MotorCotnrol'? [-Wimplicit-function-declaration]
+  127 |   MotorControl(rxData);
+      |   ^~~~~~~~~~~~
+      |   MotorCotnrol
+arm-none-eabi-gcc -o "AMR.elf" @"objects.list"   -mcpu=cortex-m4 -T"D:\Workspace\STM32\AMR\STM32F401RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="AMR.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: AMR.elf
+ 
+arm-none-eabi-size   AMR.elf 
+arm-none-eabi-objdump -h -S  AMR.elf  > "AMR.list"
+arm-none-eabi-objcopy  -O binary  AMR.elf  "AMR.bin"
+   text	   data	    bss	    dec	    hex	filename
+  13016	     20	   1972	  15008	   3aa0	AMR.elf
+Finished building: default.size.stdout
+ 
+Finished building: AMR.bin
+Finished building: AMR.list
+ 
+ 
+
+16:39:08 Build Finished. 0 errors, 1 warnings. (took 2s.373ms)
+

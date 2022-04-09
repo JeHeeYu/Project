@@ -1,0 +1,48 @@
+/*
+ * serialcomm.c
+ *
+ *  Created on: Apr 3, 2022
+ *      Author: sees1
+ */
+
+#include "main.h"
+#include "serialcomm.h"
+
+
+void SerialInit(Serial* u)
+{
+  u->front = 0;
+  u->tail = 0;
+  memset(u->buffer, 0, sizeof(u->buffer));
+}
+
+void EnQueue(Serial* u, uint8_t data)
+{
+  u->buffer[u->front] = data;
+
+  u->front++;
+
+  if (u->front >= MAX_BUFFER_SIZE) {
+    u->front = 0;
+  }
+}
+
+uint8_t DeQueue(Serial* u)
+{
+  uint8_t data = u->buffer[u->tail];
+
+  u->tail++;
+
+  if (u->tail >= MAX_BUFFER_SIZE) {
+    u->tail = 0;
+  }
+
+  return data;
+}
+
+uint8_t EmptyQueue(Serial* u)
+{
+  return u->front == u->tail;
+}
+
+

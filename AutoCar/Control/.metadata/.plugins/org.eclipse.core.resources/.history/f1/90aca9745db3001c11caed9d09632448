@@ -1,0 +1,29 @@
+/*
+ * common.h
+ *
+ *  Created on: Mar 12, 2022
+ *      Author: sees1
+ */
+
+#ifndef INC_COMMON_H_
+#define INC_COMMON_H_
+
+#define HIGH 			SET
+#define LOW 			RESET
+/*
+#define STRAIGHT		'A'
+#define BACK			'B'
+#define RIGHT			'C'
+#define LEFT			'D'
+#define NONE			'Q'
+*/
+typedef enum
+{
+	Straight = 65,
+	Back,
+	Right,
+	Left,
+	None = 199,
+}drive_t;
+
+#endif /* INC_COMMON_H_ */

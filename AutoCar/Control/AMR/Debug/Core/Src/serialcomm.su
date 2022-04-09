@@ -1,0 +1,4 @@
+serialcomm.c:12:6:SerialInit	16	static
+serialcomm.c:19:6:EnQueue	16	static
+serialcomm.c:30:9:DeQueue	24	static
+serialcomm.c:43:9:EmptyQueue	16	static

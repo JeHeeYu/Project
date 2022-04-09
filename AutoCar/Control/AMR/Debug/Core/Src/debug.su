@@ -1,0 +1,4 @@
+debug.c:17:5:_write	24	static
+debug.c:24:6:vprint	216	static
+debug.c:32:6:User_Printf	16	static
+debug.c:40:6:MotorTest	8	static

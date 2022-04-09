@@ -1,0 +1,50 @@
+/*
+ * motor.c
+ *
+ *  Created on: Mar 12, 2022
+ *      Author: sees1
+ */
+
+#include "main.h"
+#include "common.h"
+#include "motor.h"
+
+void MotorControl(uint8_t data)
+{
+	if(data == Straight)
+	User_Printf("\n\rvalue : %d", data);
+	switch((drive_t)data)
+	{
+	case 1:
+		User_Printf("\n\rStraight!");
+		break;
+	case 2:
+		User_Printf("\n\rBack!");
+		break;
+	case 3:
+		User_Printf("\n\rRight!");
+		break;
+	case 4:
+		User_Printf("\n\rLeft!");
+		break;
+	default:
+		User_Printf("\n\rNone!");
+		break;
+	}
+}
+
+void MotorOn(GPIO_TypeDef* port, uint16_t pinA, uint16_t pinB)
+{
+	HAL_GPIO_WritePin(port, pinA, HIGH);
+	HAL_Delay(100);
+	HAL_GPIO_WritePin(port, pinB, LOW);
+	HAL_Delay(100);
+}
+
+void MotorOff(GPIO_TypeDef* port, uint16_t pinA, uint16_t pinB)
+{
+	HAL_GPIO_WritePin(port, pinA, LOW);
+	HAL_Delay(100);
+	HAL_GPIO_WritePin(port, pinB, LOW);
+	HAL_Delay(100);
+}

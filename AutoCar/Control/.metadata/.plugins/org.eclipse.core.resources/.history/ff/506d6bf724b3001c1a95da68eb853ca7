@@ -1,0 +1,48 @@
+/*
+ * serialcomm.c
+ *
+ *  Created on: Apr 3, 2022
+ *      Author: sees1
+ */
+
+#include "main.h"
+#include "serialcomm.h"
+
+
+void init_uart(Serial* u)
+{
+  u->head = 0;
+  u->tail = 0;
+  memset(u->buffer, 0, sizeof(u->buffer));
+}
+
+void push(Serial* u, uint8_t data)
+{
+  u->buffer[u->head] = data;
+
+  u->head++;
+
+  if (u->head >= MAX_BUFFER_SIZE) {
+    u->head = 0;
+  }
+}
+
+uint8_t pop(Serial* u)
+{
+  uint8_t data = u->buffer[u->tail];
+
+  u->tail++;
+
+  if (u->tail >= MAX_BUFFER_SIZE) {
+    u->tail = 0;
+  }
+
+  return data;
+}
+
+uint8_t isEmpty(Serial* u)
+{
+  return u->head == u->tail;
+}
+
+
