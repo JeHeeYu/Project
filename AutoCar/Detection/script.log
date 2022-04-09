@@ -1,6 +1,0 @@
-Traceback (most recent call last):
-  File "/home/jhy/workstation/object_detection/main.py", line 1, in <module>
-    from drive import AutoCar
-  File "/home/jhy/workstation/object_detection/drive.py", line 1, in <module>
-    import cv2 as cv
-ModuleNotFoundError: No module named 'cv2'
