@@ -8,3 +8,6 @@
 ![L298N](https://user-images.githubusercontent.com/87363461/162557325-11bd7d58-6cc6-470f-8a29-ba30501f3b12.jpg)<br>
 <b>4. 12V DC Motor</b><br>
 
+
+<br><br>
+<b>Software Architecture</b><br>
